@@ -4,7 +4,7 @@ const Layout = (props) => {
         <div>
             <HEAD>
                 <title>Woocommerce React theme</title>
-                <link rel= "stylesheet" href= "https://bootswatch.com/4/lux/bootstrap.min.css"/>
+                <link rel= "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
             </HEAD>
             {props.children}
         </div>
