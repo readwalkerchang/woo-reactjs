@@ -1,3 +1,4 @@
+import { Nav } from 'react-bootstrap'
 const NavBar = () => {
     return(
         <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
