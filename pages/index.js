@@ -1,7 +1,12 @@
+import Layout from "../components/layout"
+
+import Layout from "../components/Layout";
+
 const Index = () => {
-    return( <div>
-        <p>hello world</p>
-        </div>
+    return( 
+        <Layout>
+            Hello, world!
+        </Layout>
     )
 };
 
