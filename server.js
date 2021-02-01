@@ -4,9 +4,9 @@ const express = require('express')
 const next = require('next')
 var WooCommerceAPI = require('woocommerce-api');
 var WooCommerce = new WooCommerceAPI({
-    url: 'https://incubedigital.tk',
-    consumerKey: 'ck_b905ffb03ceb4064ed7e86518dcb50a70f753267',
-    consumerSecret: 'cs_bcd6ba45d3a8dadf930d10a7c3b4477ff5b32fdf',
+    url: '',
+    consumerKey: 'ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    consumerSecret: 'cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     wpAPI: true,
     version: 'wc/v1'
   });
