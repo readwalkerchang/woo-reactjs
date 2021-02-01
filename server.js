@@ -2,11 +2,12 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const express = require('express')
 const next = require('next')
+const wooConfig = require('../woo-reactjs/wooConfig')
 var WooCommerceAPI = require('woocommerce-api');
 var WooCommerce = new WooCommerceAPI({
-    url: '',
-    consumerKey: 'ck_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-    consumerSecret: 'cs_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    url: wooConfig.url,
+    consumerKey: wooConfig.consumerKey,
+    consumerSecret: wooConfig.consumerSecret,
     wpAPI: true,
     version: 'wc/v1'
   });
@@ -21,6 +22,17 @@ app.prepare().then(() => {
     // This tells it to parse the query portion of the URL.
     const parsedUrl = parse(req.url, true)
     const { pathname, query } = parsedUrl
+    const server = express();
+    server.get('/getProducts',(req,res) => {
+        WooCommerce.get("products")
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error.response.data);
+        });
+      
+    });
 
     if (pathname === '/a') {
       app.render(req, res, '/a', query)
