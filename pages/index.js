@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import fetch from 'isomorphic-unfetch';
 import Product from "../components/Product";
+import "../style.css"
 const clientConfig = {
 	siteUrl: 'http://localhost:3000/'
 };
