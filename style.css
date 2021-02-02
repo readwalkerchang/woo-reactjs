@@ -1,0 +1,22 @@
+.contentSection,.productContainer{
+    margin: 5% 10% 5% 10%;
+}
+
+.contentSection>img,.contentSection>h1,.contentSection>p{
+    margin: 0 0 5% 0;
+}
+.productImg{
+    background: #000;
+}
+
+ .productContainer::before{
+    content:'';
+    width:0;
+    display:inline-block;
+    position:relative;
+    vertical-align:middle;  }
+
+.productDespription{
+    margin-left: 10%;
+
+}
